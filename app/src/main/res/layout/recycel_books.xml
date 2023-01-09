@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="?attr/colorPrimary">
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="6dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="26dp"
+        android:textColor="?attr/colorOnSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                app:strokeColor="@color/gray_light"
+                app:strokeWidth="1dp"
+                android:id="@+id/imgbook"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="22dp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/materialCardView2"
+>
+
+                <ImageView
+                    android:id="@+id/img_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:backgroundTint="@color/gray"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+                app:layout_constraintEnd_toStartOf="@+id/imgbook"
+                app:layout_constraintStart_toEndOf="@+id/txt_lesson"
+                app:layout_constraintTop_toTopOf="@+id/txt_book"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/yekan"
+                android:text=""
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_book"
+                app:layout_constraintEnd_toStartOf="@+id/txt_book"
+                app:layout_constraintTop_toTopOf="@+id/txt_book" />
+
+            <TextView
+                android:id="@+id/paye_darsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/yekan"
+                android:text=""
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_lesson"
+                app:layout_constraintEnd_toStartOf="@+id/txt_lesson"
+                app:layout_constraintTop_toTopOf="@+id/txt_lesson" />
+
+            <TextView
+                android:id="@+id/date_chap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/yekan"
+                android:text=""
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+                app:layout_constraintEnd_toStartOf="@+id/txt_date"
+                app:layout_constraintTop_toTopOf="@+id/txt_date" />
+
+
+            <TextView
+                android:id="@+id/txt_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/yekan"
+                android:text="اسم کتاب :  "
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_lesson"
+                app:layout_constraintEnd_toStartOf="@+id/imgbook"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/txt_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/yekan"
+                android:text="پایه درس :  "
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_date"
+                app:layout_constraintEnd_toEndOf="@+id/txt_book"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/txt_book"
+                app:layout_constraintTop_toBottomOf="@+id/txt_book" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/yekan"
+                android:text="تاریخ چاپ :  "
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txt_lesson"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_lesson"
+                app:layout_constraintTop_toBottomOf="@+id/txt_lesson" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="36sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/PayeForShow"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="end"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/titr"
+            android:textColor="?attr/colorOnPrimary"
+            android:text="پایه هفتم "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="10dp"
+            android:backgroundTint="?attr/colorPrimary"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="230dp"
+            android:layout_height="285dp">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/imgbook"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="."
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="اسم کتاب :"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:id="@+id/paye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="."
+            android:textColor="?attr/colorOnPrimary" />
+
+        <TextView
+            android:layout_marginEnd="30dp"
+            android:text="پایه تحصیلی :"
+            android:textSize="24sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:textSize="26sp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="."
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:layout_marginEnd="30dp"
+            android:text="تاریخ چاپ :"
+            android:textSize="24sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:id="@+id/page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="."
+            android:textColor="?attr/colorOnPrimary"/>
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="30dp"
+            android:text="تعداد صفحات :"
+            android:textSize="24sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="16dp"
+            android:paddingTop="4dp"
+            android:elevation="224dp"
+            android:background="@drawable/back_info"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:elevation="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="end"
+                    android:textColor="@color/black"
+                    android:text="توضیحات :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/gray_dark"
+                    android:id="@+id/info"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="سلام" />
+
+
+            </FrameLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</LinearLayout>
+
+
